@@ -55,9 +55,9 @@ namespace MvcAuth
             //   consumerKey: "",
             //   consumerSecret: "");
 
-            //app.UseFacebookAuthentication(
-            //   appId: "",
-            //   appSecret: "");
+            app.UseFacebookAuthentication(
+               appId: ConfigurationManager.AppSettings.Get("FacebookAppId"),
+               appSecret: ConfigurationManager.AppSettings.Get("FacebookAppSecret"));
 
             app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
             {
